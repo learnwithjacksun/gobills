@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 
 @import "tailwindcss";
 
@@ -6,11 +7,12 @@
 
 :root {
   --background: #ffffff;
-  --secondary: #f9f9f9;
-  --foreground: #f5f5f5;
-  --main: #444;
+  --secondary: #f1f5f9;
+  --foreground: #f9f9f9;
+  --main: #4b556c;
   --muted: #999999;
-  --primary: #222;
+  --primary: #30b96e;
+  --primary-2: #217848;
   --line: #f1f1f1;
 }
 
@@ -18,14 +20,16 @@
   --background: #0a0a0a;
   --foreground: #212121;
   --main: #fefefe;
-  --secondary: #121212;
+  --secondary: #1a1a1a;
   --muted: #999999;
   --line: #212121;
-  --primary: #fefefe;
+  --primary: #13af5a;
+  --primary-2: #217848;
 }
 
 @theme inline {
   --font-sans: "Plus Jakarta Sans", sans-serif;
+  --font-instrument: "Instrument Sans", sans-serif;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-secondary: var(--secondary);
@@ -33,6 +37,7 @@
   --color-muted: var(--muted);
   --color-line: var(--line);
   --color-primary: var(--primary);
+  --color-primary-2: var(--primary-2);
 }
 
 *{
@@ -41,6 +46,9 @@
 
 body {
  @apply bg-background text-main font-sans;
+}
+.f{
+  color: #217848;
 }
 
 .main {
@@ -61,7 +69,7 @@ button,
 }
 
 .btn-primary {
-  @apply text-white dark:text-[#171717] bg-primary font-semibold;
+  @apply text-white bg-primary font-semibold;
 }
 
 .hide-scrollbar::-webkit-scrollbar {
