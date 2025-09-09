@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export default function Hero() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 md:items-center md:gap-4 gap-10 my-10">
-        <div className="bg-[#b9f8cf] dark:bg-green-300 rounded-2xl p-6 flex flex-col flex-1 min-h-full">
+        <div className="bg-[#b9f8cf] dark:bg-green-300 rounded-2xl md:p-10 p-6 flex flex-col flex-1 min-h-full">
             <div className="space-y-4 md:space-y-10">
                 <h2 className="text-4xl md:text-5xl font-bold text-green-700 dark:text-green-900">Quick, Simple Bill Payments.</h2>
                 <p className="text-sm md:text-lg dark:text-green-900">
