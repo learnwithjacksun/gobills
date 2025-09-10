@@ -5,4 +5,5 @@ export {default as SelectWithIcon} from "./SelectWithIcon";
 export {default as SelectWithoutIcon} from "./SelectWithoutIcon";
 export {default as ScrollToTop} from "./ScrollToTop";
 export {default as GobackButton} from "./GobackButton";
+export {default as SplitText} from "./split-text";
 
