@@ -1,7 +1,20 @@
 import { services } from "@/constants/data";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { toast } from "sonner";
+
+
 
 export default function Hero() {
+  const navigate = useNavigate()
+
+  const user = false
+  const doSomething = () => {
+if(user) {
+  navigate("/dashboard")
+} else {
+  toast.warning("Please login to use this service!")
+}
+  }
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 md:items-center md:gap-4 gap-10 my-6 md:my-10">
       <div className="bg-gradient-to-r from-green-200 via-green-100 to-green-200 dark:from-green-300 dark:via-green-400 dark:to-green-400 rounded-2xl md:p-10 p-6 flex flex-col flex-1 min-h-full">
@@ -39,6 +52,7 @@ export default function Hero() {
         <ul className="grid grid-cols-2 gap-4">
           {services.map((service) => (
             <li
+              onClick={doSomething}
               key={service.title}
               className={`${service.bg} rounded-xl p-6 md:space-y-8 space-y-4 `}
             >
