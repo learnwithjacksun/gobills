@@ -26,7 +26,7 @@ export const services = [
         title: "Airtime",
         href: "/airtime",
         bg: "bg-blue-500/10",
-        color: "text-blue-500"
+        color: "text-blue-500 dark:text-blue-400"
     },
     {
         icon: Wifi,
@@ -40,7 +40,7 @@ export const services = [
         title: "Electricity",
         href: "/electricity",
         bg: "bg-yellow-500/10",
-        color: "text-yellow-500"
+        color: "text-yellow-500 dark:text-yellow-400"
     },
     {
         icon: Tv,
@@ -61,6 +61,6 @@ export const services = [
         title: "Virtual Number",
         href: "/number",
         bg: "bg-orange-500/10",
-        color: "text-orange-500"
+        color: "text-orange-500 dark:text-orange-400"
     },
 ]

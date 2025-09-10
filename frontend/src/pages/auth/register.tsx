@@ -22,14 +22,14 @@ export default function Register() {
           label="Username"
           type="text"
           className="bg-secondary dark:bg-secondary/70"
-          placeholder="e.g John Doe or Scorpion"
+          placeholder="e.g John Doe"
         />
         <InputWithIcon
           icon={<Mail size={20} />}
           label="Email"
           type="email"
           className="bg-secondary dark:bg-secondary/70"
-          placeholder="e.g john.doe@example.com"
+          placeholder="e.g johndoe@example.com"
         />
         <InputWithIcon
           icon={<Phone size={20} />}
