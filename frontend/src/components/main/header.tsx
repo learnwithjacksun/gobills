@@ -5,16 +5,17 @@ import ModeToggle from "../ui/mode-toggle";
 export default function Header() {
   return (
     <>
-      <header className="sticky top-0 z-50 bg-background/70 dark:bg-secondary/70 backdrop-blur-sm border-b border-line">
-        <nav className="main h-[70px] flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-2">
+    <div className="fixed inset-x-0 top-0 h-[100px] bg-gradient-to-b from-background via-background/80 to-transparent"/>
+      <header className="sticky top-0 z-50 ">
+        <nav className="main flex items-center justify-between pt-4">
+          <Link to="/" className="flex items-center gap-2 ">
             <img src="/logo.svg" alt="Gobills" className="w-10 h-10" />
-            <p className="text-2xl font-bold">
+            <p className="text-2xl font-bold text-shadow-lg">
               Gobills<span className="text-primary">&bull;</span>
             </p>
           </Link>
 
-          <div className="flex items-center md:gap-6 gap-4">
+          <div className="flex items-center md:gap-6 gap-4 dark:bg-secondary/20 backdrop-blur-lg border border-line px-4 rounded-full h-[70px]">
             <ModeToggle />
             <a
               href="https://help.gobills.com"
@@ -27,13 +28,13 @@ export default function Header() {
             <div className="md:flex items-center gap-4 hidden">
               <Link
                 to="/login"
-                className="btn text-sm font-semibold border border-line px-4 py-2 rounded-full"
+                className="btn text-sm font-semibold border border-line px-6 py-3 rounded-full"
               >
                 Login
               </Link>
               <Link
                 to="/register"
-                className="btn btn-primary text-sm font-semibold border border-line px-4 py-2 rounded-full"
+                className="btn btn-primary text-sm font-semibold border border-line px-6 py-3 rounded-full"
               >
                 Register
               </Link>
