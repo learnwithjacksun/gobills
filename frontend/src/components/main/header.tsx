@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import ModeToggle from "../ui/mode-toggle";
 
 export default function Header() {
+  const user = true;
   return (
     <>
     <div className="fixed inset-x-0 top-0 h-[100px] bg-gradient-to-b from-background dark:from-foreground/70 via-background/80 dark:via-foreground/40 to-transparent"/>
@@ -15,7 +16,7 @@ export default function Header() {
             </p>
           </Link>
 
-          <div className="flex items-center md:gap-6 gap-4 ">
+          {!user && (<div className="flex items-center md:gap-6 gap-4 ">
             <ModeToggle />
             <a
               href="https://help.gobills.com"
@@ -39,7 +40,20 @@ export default function Header() {
                 Register
               </Link>
             </div>
+          </div>)}
+
+          {user &&(
+            <div className="flex items-center md:gap-6 gap-4 ">
+            <ModeToggle />
+            
+            <div className="flex items-center gap-2 ">
+              <p className="text-sm font-medium hidden md:block">Gift Jacksun</p>
+              <div className="md:h-12 md:w-12 h-10 w-10 rounded-full overflow-hidden bg-primary">
+                <img src="https://api.dicebear.com/9.x/adventurer/svg?seed=Felix" alt="avatar" className="w-full h-full object-cover" />
+              </div>
+            </div>
           </div>
+          )}
         </nav>
       </header>
     </>

@@ -1,4 +1,4 @@
-import { Footer, Header } from "@/components/main";
+import { Header } from "@/components/main";
 import { Pattern } from "@/components/ui";
 
 interface MainLayoutProps {
@@ -11,7 +11,7 @@ export default function MainLayout({ children }: MainLayoutProps) {
         <Header />
         <main className="main">{children}</main>
       </Pattern>
-      <Footer />
+     
     </>
   );
 }

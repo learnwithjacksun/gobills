@@ -1,9 +1,9 @@
 import { Route, Routes } from "react-router-dom";
 import { Toaster } from "sonner";
 import { ScrollToTop } from "@/components/ui";
-import { Home } from "@/pages/main";
 import { ForgotPassword, Login, Register, ResetPassword } from "./pages/auth";
-import { Notfound } from "./pages";
+import { Notfound, Home } from "./pages";
+import { Overview } from "./pages/main";
 
 export default function App() {
   return (
@@ -16,6 +16,7 @@ export default function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/reset-password" element={<ResetPassword />} />
+        <Route path="/overview" element={<Overview />} />
         <Route path="*" element={<Notfound />} />
       </Routes>
     </>
