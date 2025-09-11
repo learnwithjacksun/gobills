@@ -26,8 +26,8 @@ export default function ForgotPassword() {
         />
        
         <ButtonWithLoader
-          initialText="Login"
-          loadingText="Logging in..."
+          initialText="Continue"
+          loadingText="Sending..."
           className="btn-primary text-sm font-semibold h-11 rounded-full w-full"
         />
 
