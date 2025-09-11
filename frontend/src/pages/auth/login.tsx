@@ -46,14 +46,7 @@ export default function Login() {
         />
 
         <p className="text-xs text-center text-muted">
-          By continuing, you agree to our{" "}
-          <Link to="/terms" className="text-blue-500 underline">
-            Terms of Service
-          </Link>{" "}
-          and{" "}
-          <Link to="/privacy" className="text-blue-500 underline">
-            Privacy Policy
-          </Link>
+         We do not use cookies, we use bread. 😐
         </p>
       </form>
     </AuthLayout>
