@@ -1,4 +1,4 @@
-import { FirstBox } from "@/components/main";
+import { FirstBox, SecondBox } from "@/components/main";
 import { MainLayout } from "@/layouts";
 import { Menu } from "lucide-react";
 
@@ -8,7 +8,7 @@ export default function Overview() {
       <MainLayout>
         <div className="grid lg:grid-cols-4 sm:grid-cols-1 gap-4 my-6 md:my-10">
           <FirstBox />
-          <div className="lg:col-span-2 bg-red-400 p-4"></div>
+          <div className="lg:col-span-2"><SecondBox /></div>
           <div className="bg-blue-400 p-4 hidden lg:block"></div>
         </div>
       </MainLayout>

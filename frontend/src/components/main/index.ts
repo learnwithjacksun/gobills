@@ -2,3 +2,4 @@ export { default as Header } from "./header";
 export { default as Hero } from "./hero";
 export { default as Footer } from "./footer";
 export { default as FirstBox } from "./first-box";
+export { default as SecondBox } from "./second-box";
