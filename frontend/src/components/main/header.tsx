@@ -5,7 +5,7 @@ import ModeToggle from "../ui/mode-toggle";
 export default function Header() {
   return (
     <>
-    <div className="fixed inset-x-0 top-0 h-[100px] bg-gradient-to-b from-background dark:from-secondary/70 via-background/80 dark:via-secondary/70 to-transparent"/>
+    <div className="fixed inset-x-0 top-0 h-[100px] bg-gradient-to-b from-background dark:from-foreground/70 via-background/80 dark:via-foreground/40 to-transparent"/>
       <header className="sticky top-0 z-50 ">
         <nav className="main h-[70px] flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2 ">
@@ -28,7 +28,7 @@ export default function Header() {
             <div className="md:flex items-center gap-4 hidden">
               <Link
                 to="/login"
-                className="btn text-sm bg-secondary font-semibold border border-line px-6 py-3 rounded-full"
+                className="btn text-sm bg-foreground font-semibold border border-line px-6 py-3 rounded-full"
               >
                 Login
               </Link>

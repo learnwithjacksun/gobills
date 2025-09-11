@@ -54,7 +54,7 @@ if(user) {
             <li
               onClick={doSomething}
               key={service.title}
-              className={`${service.bg} rounded-xl p-6 md:space-y-8 space-y-4 `}
+              className={`${service.bg} drop-shadow-xl rounded-xl p-6 md:space-y-8 space-y-4 `}
             >
               <service.icon size={30} className={service.color} />
               <span className="font-medium text-sm md:text-base">

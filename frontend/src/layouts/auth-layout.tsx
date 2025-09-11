@@ -7,7 +7,7 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
     <>
       <Pattern>
         <Header />
-        <main className="my-10 mx-auto md:w-[480px] w-[90%]">
+        <main className="py-10 mx-auto md:w-[480px] w-[90%]">
         {children}
         </main>
       </Pattern>

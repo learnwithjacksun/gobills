@@ -16,12 +16,12 @@
 }
 
 .dark {
-  --background: #0a0a0a;
-  --foreground: #212121;
+  --background: #050810;
+  --foreground: #21242c;
   --main: #fefefe;
-  --secondary: #1a1a1a;
+  --secondary: #12151c;
   --muted: #999999;
-  --line: #212121;
+  --line: #2a2e35;
   --primary: #13af5a;
   --primary-2: #217848;
 }
