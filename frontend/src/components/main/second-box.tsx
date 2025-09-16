@@ -1,18 +1,19 @@
 import { services } from "@/constants/data";
-import { Boxes } from "lucide-react";
 
 export default function Secondbox() {
   return (
-    <div className="bg-background space-y-4 border border-line dark:bg-secondary rounded-xl p-4 h-full flex flex-col">
-        <h3 className="flex items-center gap-2 font-space text-xl font-medium uppercase"><Boxes className="text-yellow-500" />Services</h3>
+    <div className=" space-y-4  h-full flex flex-col">
+        <h3 className="flex items-center gap-2 font-space text-xl font-medium">Services</h3>
 
         <ul className="grid grid-cols-2 gap-4">
           {services.map((service) => (
             <li
               key={service.title}
-              className={`${service.bg} drop-shadow-xl rounded-xl p-6 md:space-y-8 space-y-4 `}
+              className={`flex flex-col gap-2 shadow-2xl p-4 rounded-2xl bg-background space-y-4 border border-line dark:bg-secondary ${service.shadow}`}
             >
-              <service.icon size={30} className={service.color} />
+              <div className={`${service.bg} h-10 w-10 center rounded-lg`}>
+                <service.icon size={20} className={service.color} />
+              </div>
               <span className="font-medium text-sm md:text-base">
                 {service.title}
               </span>

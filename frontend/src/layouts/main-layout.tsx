@@ -9,7 +9,7 @@ export default function MainLayout({ children }: MainLayoutProps) {
     <>
       <Pattern>
         <Header />
-        <main className="main">{children}</main>
+        <main className="layout">{children}</main>
       </Pattern>
      
     </>

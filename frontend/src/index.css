@@ -56,7 +56,7 @@ body {
 }
 
 .layout {
-  @apply max-w-[90%] md:max-w-[700px] mx-auto;
+  @apply max-w-[90%] md:max-w-[800px] mx-auto;
 }
 
 .center {

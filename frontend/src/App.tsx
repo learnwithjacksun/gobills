@@ -16,7 +16,7 @@ export default function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/reset-password" element={<ResetPassword />} />
-        <Route path="/overview" element={<Overview />} />
+        <Route path="/dashboard" element={<Overview />} />
         <Route path="*" element={<Notfound />} />
       </Routes>
     </>
