@@ -132,21 +132,21 @@ const SplitText: React.FC<SplitTextProps> = ({
       });
 
       tl.fromTo(
-        targets,
-        { ...from },
-        {
-          ...to,
-          duration,
-          ease,
-          stagger: delay / 1000,
-          onComplete: () => {
-            animationCompletedRef.current = true;
-            onLetterAnimationComplete?.();
-          },
-          willChange: 'transform, opacity',
-          force3D: true
-        }
-      );
+            targets,
+            { ...from },
+            {
+              ...to,
+              duration,
+              ease,
+              stagger: delay / 1000,
+              onComplete: () => {
+                animationCompletedRef.current = true;
+                onLetterAnimationComplete?.();
+              },
+              willChange: 'transform, opacity',
+              force3D: true
+            }
+          );
 
       return () => {
         ScrollTrigger.getAll().forEach(st => {

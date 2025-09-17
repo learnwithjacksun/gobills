@@ -7,4 +7,6 @@ export {default as ScrollToTop} from "./ScrollToTop";
 export {default as GobackButton} from "./GobackButton";
 export {default as SplitText} from "./split-text";
 export {default as Pattern} from "./pattern";
+export {default as SlidingMenu} from "./sliding-menu";
+export {default as ModeToggle} from "./mode-toggle";
 

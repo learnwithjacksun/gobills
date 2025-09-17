@@ -1,9 +1,12 @@
 import { HelpCircle, Menu } from "lucide-react";
 import { Link } from "react-router-dom";
-import ModeToggle from "../ui/mode-toggle";
+import { useState } from "react";
+import { ModeToggle } from "../ui";
+import SlidingMenu from "../ui/sliding-menu-framer";
 
 export default function Header() {
   const user = true;
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <>
       <div className="fixed  inset-x-0 top-0 h-[100px] bg-gradient-to-b from-background dark:from-foreground/90 via-background/80 dark:via-foreground/70 to-transparent" />
@@ -61,14 +64,28 @@ export default function Header() {
                 </div>
               </div>
 
-                <button className="h-10 w-10 rounded-full">
-                          <Menu size={24} />
-                        </button>
+                <button 
+                  onClick={() => {
+                    console.log('Menu button clicked, current state:', isMenuOpen);
+                    setIsMenuOpen(true);
+                  }}
+                  className="h-10 w-10 rounded-full hover:bg-muted transition-colors flex items-center justify-center"
+                >
+                  <Menu size={24} />
+                </button>
               
             </div>
           )}
         </nav>
       </header>
+      
+      {/* Sliding Menu */}
+      <SlidingMenu 
+        isOpen={isMenuOpen}
+        onClose={() => setIsMenuOpen(false)}
+        userName="Gift Jacksun"
+        userAvatar="https://api.dicebear.com/9.x/adventurer/svg?seed=Felix"
+      />
     </>
   );
 }
