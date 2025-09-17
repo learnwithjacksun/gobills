@@ -19,7 +19,7 @@ if(user) {
     <div className="grid grid-cols-1 md:grid-cols-2 md:items-center md:gap-4 gap-10 my-6 md:my-10">
       <div className="bg-gradient-to-r from-green-200 via-green-100 to-green-200 dark:from-green-300 dark:via-green-400 dark:to-green-400 rounded-2xl md:p-10 p-6 flex flex-col flex-1 min-h-full">
         <div className="space-y-4 md:space-y-10">
-          <h2 className="text-4xl md:text-5xl font-space font-bold text-green-700 dark:text-green-900">
+          <h2 className="text-4xl font-space font-bold text-green-700 dark:text-green-900">
             Quick, Simple Bill Payments.
           </h2>
          

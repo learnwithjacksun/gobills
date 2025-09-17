@@ -3,7 +3,7 @@ import { Toaster } from "sonner";
 import { ScrollToTop } from "@/components/ui";
 import { ForgotPassword, Login, Register, ResetPassword } from "./pages/auth";
 import { Notfound, Home } from "./pages";
-import { Overview } from "./pages/main";
+import { Overview, Profile, Settings } from "./pages/main";
 
 export default function App() {
   return (
@@ -17,6 +17,8 @@ export default function App() {
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/reset-password" element={<ResetPassword />} />
         <Route path="/dashboard" element={<Overview />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/security" element={<Settings />} />
         <Route path="*" element={<Notfound />} />
       </Routes>
     </>

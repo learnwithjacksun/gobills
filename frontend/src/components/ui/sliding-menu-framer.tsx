@@ -1,6 +1,6 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-import { X, LogOut, Settings } from 'lucide-react';
+import { NavLink, useNavigate } from 'react-router-dom';
+import { X, LogOut, Lock } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { navlinks } from '@/constants/data';
 
@@ -17,6 +17,7 @@ const SlidingMenu: React.FC<SlidingMenuProps> = ({
   userName = "Gift Jacksun",
   userAvatar = "https://api.dicebear.com/9.x/adventurer/svg?seed=Felix"
 }) => {
+  const navigate = useNavigate();
   const handleOverlayClick = (e: React.MouseEvent) => {
     if (e.target === e.currentTarget) {
       onClose();
@@ -49,7 +50,7 @@ const SlidingMenu: React.FC<SlidingMenuProps> = ({
               stiffness: 200,
               duration: 0.4 
             }}
-            className="absolute left-0 top-0 h-full w-80 max-w-[85vw] bg-background border-r border-line shadow-2xl"
+            className="absolute left-0 top-0 h-full flex flex-col w-80 max-w-[85vw] bg-background dark:bg-secondary border-r border-line shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Header */}
@@ -65,7 +66,7 @@ const SlidingMenu: React.FC<SlidingMenuProps> = ({
               </div>
               <button
                 onClick={onClose}
-                className="p-2 rounded-full hover:bg-secondary transition-colors"
+                className="p-2 rounded-full hover:bg-secondary dark:hover:bg-foreground transition-colors"
               >
                 <X size={20} />
               </button>
@@ -88,7 +89,7 @@ const SlidingMenu: React.FC<SlidingMenuProps> = ({
                 </div>
                 <div>
                   <p className="font-medium">{userName}</p>
-                  <p className="text-sm text-muted">Premium User</p>
+                  <p className="text-sm text-muted">A mere mortal</p>
                 </div>
               </div>
             </motion.div>
@@ -113,7 +114,7 @@ const SlidingMenu: React.FC<SlidingMenuProps> = ({
                       onClick={onClose}
                       className={({ isActive }) =>
                         `flex items-center gap-3 text-sm md:text-base p-3 rounded-lg transition-colors group ${
-                          isActive ? 'bg-secondary font-semibold text-yellow-500' : 'hover:bg-secondary text-muted'
+                          isActive ? 'bg-secondary dark:bg-foreground font-semibold text-yellow-500' : 'hover:bg-secondary dark:hover:bg-foreground text-muted'
                         }`
                       }
                     >
@@ -133,7 +134,7 @@ const SlidingMenu: React.FC<SlidingMenuProps> = ({
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.3 }}
-              className="p-4 border-t border-line"
+              className="p-4 border-t border-line mt-auto"
             >
             
               <div className="space-y-2">
@@ -141,10 +142,11 @@ const SlidingMenu: React.FC<SlidingMenuProps> = ({
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.7, duration: 0.3 }}
-                  className="flex items-center gap-3 p-3 rounded-lg bg-secondary/10 text-sm md:text-base transition-colors group w-full text-left"
+                  onClick={() => navigate('/security')}
+                  className="flex items-center gap-3 p-3 rounded-lg dark:bg-foreground text-sm md:text-base transition-colors group w-full text-left"
                 >
-                  <Settings size={20} className="text-muted group-hover:text-yellow-500 transition-colors" />
-                  <span className="font-medium">Settings</span>
+                  <Lock size={20} className="text-yellow-500 transition-colors" />
+                  <span className="font-medium">Security</span>
                 </motion.button>
                 <motion.button 
                   initial={{ opacity: 0, x: 20 }}

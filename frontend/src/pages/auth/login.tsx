@@ -16,7 +16,7 @@ export default function Login() {
         </p>
       </div>
 
-      <form className="space-y-4 bg-background dark:bg-secondary p-6 border-2 border-line rounded-3xl my-10">
+      <form className="space-y-4 bg-background dark:bg-secondary p-6 border-2 border-line rounded-xl my-10">
         <InputWithIcon
           icon={<Mail size={20} />}
           label="Email"
